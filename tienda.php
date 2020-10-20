@@ -37,6 +37,7 @@
         echo("Debes revisar tu compra, no te alcanza");
     }*/
 
+    
     $edad=50;
     //soy joven si tengo entre 14 y 28 años en colombia
     if($edad>=14 && $edad<29){
