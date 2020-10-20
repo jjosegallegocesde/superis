@@ -51,10 +51,19 @@
             
 
             <?php 
-            
+
+        
                 if(isset($_POST["botonEnviar"])){
 
-                    echo("haciendo clic");
+                    $nombre=$_POST["nombreProducto"];
+                    $precio=$_POST["precioProducto"];
+
+                    $precio=$precio+5000;
+
+                    echo("El producto es: ".$nombre." y su precio es de : $".$precio);
+                    
+                 
+
 
                 }
             
