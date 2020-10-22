@@ -22,7 +22,7 @@
                 <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="registro.php">Registro</a>
+                <a class="nav-link" href="#">Link</a>
             </li>
             </ul>
         </div>
@@ -35,13 +35,19 @@
        <div class="row justify-content-center">
            <div class="col-6">
             
-           <form action="formularioProductos.php" method="POST">
+           <form action="registro.php" method="POST">
                 <div class="row mt-5">
                     <div class="col">
-                        <input type="text" class="form-control" placeholder="Producto" name="nombreProducto">
+                        <input type="text" class="form-control" placeholder="Nombre" name="nombreUsuario">
                     </div>
                     <div class="col">
-                        <input type="number" class="form-control" placeholder="precio" name="precioProducto">
+                        <input type="text" class="form-control" placeholder="Apellido" name="apellidoUsuario">
+                    </div>
+                    <div class="col">
+                        <input type="number" class="form-control" placeholder="Edad" name="edadUsuario">
+                    </div>
+                    <div class="col">
+                        <input type="text" class="form-control" placeholder="Fotografia" name="fotografia">
                     </div>
                 </div>
                 <button type="submit" class="btn btn-primary mt-4" name="botonEnviar">Controlar</button>
@@ -50,20 +56,26 @@
             
             <?php if(isset($_POST["botonEnviar"])): ?> 
 
-                   <?php
+                <?php
                     
-                    $precio=$_POST["precioProducto"];
-                    $nombre=$_POST["nombreProducto"];
-                    $precio=$precio+5000;
-                    
-                    ?>
+                    $nombre=$_POST["nombreUsuario"];
+                    $apellido=$_POST["apellidoUsuario"];
+                    $edad=$_POST["edadUsuario"];
+                    $foto=$_POST["fotografia"];
+                ?>
                    
-                   <h2 class="text-danger"><?php echo($nombre) ?></h2>
-                   <h2 class="text-danger"><?php echo($precio) ?></h2> 
+                   <h5><?php echo($nombre) ?></h5>
+                   <h5><?php echo($apellido) ?></h5>
+                   <h6><?php echo($edad)?></h6>
+                   <img src="<?php echo($foto)?>" alt="perfil">
+                   
+                   
+                   
 
+                  
             <?php endif ?>
 
-        
+            
             
             
             
