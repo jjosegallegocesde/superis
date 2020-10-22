@@ -47,28 +47,31 @@
                 <button type="submit" class="btn btn-primary mt-4" name="botonEnviar">Controlar</button>
             </form>
 
-
             
+            <?php if(isset($_POST["botonEnviar"])): ?> 
 
-            <?php 
-
-        
-                if(isset($_POST["botonEnviar"])){
-
-                    $nombre=$_POST["nombreProducto"];
-                    $precio=$_POST["precioProducto"];
-
-                    $precio=$precio+5000;
-
-                    echo("El producto es: ".$nombre." y su precio es de : $".$precio);
+                   <?php
                     
-                 
+                    $precio=$_POST["precioProducto"];
+                    $nombre=$_POST["nombreProducto"];
+                    $precio=$precio+5000;
+                    
+                    ?>
+                   
+                   <h2 class="text-danger"><?php echo($nombre) ?></h2>
+                   <h2 class="text-danger"><?php echo($precio) ?></h2> 
 
+            <?php endif ?>
 
-                }
+            //un form (nombre, apellido,edad)
+            //muestre en pantalla usando un h4 nombre=verde, apellido=rojo, edad=azul
             
             
-            ?>
+            
+            
+            
+            
+           
 
 
            </div>
