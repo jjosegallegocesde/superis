@@ -57,7 +57,8 @@
             <?php if(isset($_POST["botonEnviar"])): ?> 
 
                 <?php
-                    
+                    $fotoHombre="https://image.freepik.com/vector-gratis/perfil-avatar-hombre-icono-redondo_24640-14044.jpg";
+                    $fotoMujer="https://image.freepik.com/vector-gratis/diseno-ilustracion-vector-personaje-avatar-mujer-joven_24877-18520.jpg";
                     $nombre=$_POST["nombreUsuario"];
                     $apellido=$_POST["apellidoUsuario"];
                     $edad=$_POST["edadUsuario"];
@@ -67,14 +68,13 @@
                    <h5><?php echo($nombre) ?></h5>
                    <h5><?php echo($apellido) ?></h5>
                    <h6><?php echo($edad)?></h6>
+                   
+                   
                    <img src="<?php echo($foto)?>" alt="perfil">
-                   
-                   
-                   
-
-                  
+    
             <?php endif ?>
 
+//masculino//femenino
             
             
             
