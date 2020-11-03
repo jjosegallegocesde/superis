@@ -16,6 +16,10 @@ $productos=array(
     
 );
 
+//arreglo multidimensional de usuarios
+//nombre-apellido-edad-telefono-contraseña
+//5 usuarios //nombre--contraseña
+
 print_r($productos);
 echo("<br>");
 echo("<br>");
@@ -23,7 +27,7 @@ echo("<br>");
 
 foreach($productos as $producto){
 
-    print_r($producto["nombre"]);
+    echo($producto["nombre"]." --> ".$producto["precio"]);
     echo("<br>");
 
 }
