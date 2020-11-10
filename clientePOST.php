@@ -9,7 +9,7 @@
 <body>
 
     <header>
-        <h1>SOLICTUD O PETICION GET</h1>
+        <h1>SOLICTUD O PETICION POST</h1>
         <hr>
     </header>
 
@@ -18,7 +18,7 @@
     
         <div class="container">
 
-        <form action="servidorGET.PHP" method="GET">
+        <form action="servidorPOST.PHP" method="POST">
                 <div class="row mt-5">
                     <div class="col">
                         <input type="text" class="form-control" placeholder="nombre" name="nombre">
