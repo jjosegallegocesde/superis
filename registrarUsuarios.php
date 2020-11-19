@@ -14,7 +14,7 @@
         $transaccion=new BaseDatos();
 
         //3.Construir una consulta SQL para insertar datos
-        $consultaSQL="INSERT INTO usuarios(nombre,apellido,descripcion,genero) VALUES ('$nombre','$apellido','$descripcion','$genero')";
+        $consultaSQL="INSERT INTO usuarios(nombre) VALUES ('$nombre','$apellido','$descripcion','$genero')";
         
         //4. Utilizar el metodo agregarDatos() de la clase BaseDatos
         $transaccion->agregarDatos($consultaSQL);

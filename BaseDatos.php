@@ -36,7 +36,7 @@ public function agregarDatos($consultaSQL){
 
     //1. Establecer una conexión con la BD
     $conexionBD=$this->conectarBD();
-
+    
     //2. Peparar la consulta
     $consultaInsertarDatos=$conexionBD->prepare($consultaSQL);
 
@@ -50,6 +50,24 @@ public function agregarDatos($consultaSQL){
         echo("Error agregando el registro");
     }
     
+}
+
+public function consultarDatos($consultaSQL){
+
+    //1.Establecer la conexión
+    $conexionBD=$this->conectarBD();
+
+    //2. Preparar la consulta para agregar datos
+    $consultaBuscarDatos=$conexionBD->prepare($consultaSQL);
+
+    //3. Establecer como(En que formato) devolver los datos consultados
+    $consultaBuscarDatos->setFetchMode(PDO::FETCH_ASSOC);
+
+    //4. Ejecutar la consulta preparada
+    $resultado=$consultaBuscarDatos->execute();
+
+    //5. Retornar los datos consultados
+    return($consultaBuscarDatos->fetchAll());
 }
 
 

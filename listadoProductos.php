@@ -13,10 +13,10 @@
         <?php 
             //consulta a la BD
             $productos=array(
-                "producto1"=>array("nombre"=>"arroz","precio"=>1600,"marca"=>"Diana","foto"=>"https://jumbocolombiafood.vteximg.com.br/arquivos/ids/3510549-750-750/7702511000991.jpg?v=637273105665030000"),
-                "producto2"=>array("nombre"=>"salchichas","precio"=>5000,"marca"=>"Zenú","foto"=>"https://jumbocolombiafood.vteximg.com.br/arquivos/ids/225648-1000-1000/7701101245903.jpg?v=636306142935430000"),
-                "producto3"=>array("nombre"=>"azucar","precio"=>2500,"marca"=>"incauca","foto"=>"https://jumbocolombiafood.vteximg.com.br/arquivos/ids/158589-1000-1000/7702059505026-1.jpg?v=636082723719600000"),
-                "producto4"=>array("nombre"=>"aceite","precio"=>7000,"marca"=>"Premier","foto"=>"https://metrocolombiafood.vteximg.com.br/arquivos/ids/227842-1000-1000/7701018073156.jpg?v=636858691475630000")  
+                array("nombre"=>"arroz","precio"=>1600,"marca"=>"Diana","foto"=>"https://jumbocolombiafood.vteximg.com.br/arquivos/ids/3510549-750-750/7702511000991.jpg?v=637273105665030000"),
+                array("nombre"=>"salchichas","precio"=>5000,"marca"=>"Zenú","foto"=>"https://jumbocolombiafood.vteximg.com.br/arquivos/ids/225648-1000-1000/7701101245903.jpg?v=636306142935430000"),
+                array("nombre"=>"azucar","precio"=>2500,"marca"=>"incauca","foto"=>"https://jumbocolombiafood.vteximg.com.br/arquivos/ids/158589-1000-1000/7702059505026-1.jpg?v=636082723719600000"),
+                array("nombre"=>"aceite","precio"=>7000,"marca"=>"Premier","foto"=>"https://metrocolombiafood.vteximg.com.br/arquivos/ids/227842-1000-1000/7701018073156.jpg?v=636858691475630000")  
             );
         ?>
 
