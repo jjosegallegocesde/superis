@@ -37,16 +37,16 @@
 
                 <div class="col mb-4">
                     <div class="card h-100">
-                        <img src="..." class="card-img-top" alt="...">
+                        <img src="<?php echo($usuario["foto"])?>" class="card-img-top" alt="fotoscard">
                         <div class="card-body">
                             <h5 class="card-title"><?= $usuario["nombre"] ?></h5>
                             <p class="card-text"><?= $usuario["descripcion"] ?></p>
+                            <a href="eliminarUsuarios.php?id=<?= ($usuario["idUsuario"])?>" class="btn btn-danger">Eliminar</a>
                         </div>
                     </div>
                 </div>
                 
             <?php endforeach ?>
-            
 
         </div>
     
