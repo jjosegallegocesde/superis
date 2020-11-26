@@ -43,13 +43,13 @@
                             <h5 class="card-title"><?= $usuario["nombre"] ?></h5>
                             <p class="card-text"><?= $usuario["descripcion"] ?></p>
                             <a href="eliminarUsuarios.php?id=<?= ($usuario["idUsuario"])?>" class="btn btn-danger">Eliminar</a>
-                            <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#exampleModal">
+                            <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#editar<?php echo($usuario["idUsuario"])?>">
                                 Editar
                             </button>
                         </div>
                     </div>
 
-                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal fade" id="editar<?php echo($usuario["idUsuario"])?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                         <div class="modal-dialog">
                             <div class="modal-content">
                                 <div class="modal-header">
@@ -59,16 +59,16 @@
                                     </button>
                                 </div>
                                 <div class="modal-body">
-                                    <form action="">
+                                    <form action="editarUsuarios.php?id=<?php echo($usuario["idUsuario"])?>" method="POST">
                                         <div class="form-group">
                                             <label>Nombre:</label>
-                                            <input type="text" class="form-control">
+                                            <input type="text" class="form-control" name="nombreEditar" value="<?php echo($usuario["nombre"])?>">
                                         </div>
                                         <div class="form-group">
                                             <label>Descripcion:</label>
-                                            <textarea class="form-control" rows="3"></textarea>
+                                            <textarea class="form-control" rows="3" name="descripcionEditar"><?php echo($usuario["descripcion"])?></textarea>
                                         </div>
-                                        <button type="submit" class="btn btn-info">Enviar</button>
+                                        <button type="submit" class="btn btn-info" name="botonEditar">Enviar</button>
                                     </form>
                                 </div>
                             </div>
